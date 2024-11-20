@@ -1,0 +1,22 @@
+from tkinter import *
+def action():
+    N = int(entrnobmbre1.get())
+    N2 = 2*N
+    entrnobmbre2.delete(0,END)
+    entrnobmbre2.insert(0, N2)
+fen = Tk()
+fen.geometry("300x210")
+lblnombre1 = Label(fen, text = "entrer la valeur N ")
+lblnombre1.place(x=30, y=50)
+entrnobmbre1 = Entry(fen)
+entrnobmbre1.place(x=150, y=50)
+
+lblnombre2 = Label(fen, text = "Voici le double: ")
+lblnombre2.place(x=30, y=100)
+entrnobmbre2 = Entry(fen)
+entrnobmbre2.place(x=150, y=100)
+valider = Button(fen, text = "valider l operation", command=action)
+valider.place(x=160, y=140)
+
+
+fen.mainloop()
